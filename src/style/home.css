@@ -1,0 +1,14 @@
+.annuaire_titre {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.annuaire_case {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.annuaire_image {
+  height: 100px !important;
+}

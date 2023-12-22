@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { HomeArcs } from "../src/component/HomeArcs";
+import { HomeArmes } from "../src/component/HomeArmes";
+import { HomeAnnuaire } from "../src/component/HomeAnnuaire";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import "milligram";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+  return <RouterProvider router={router} />;
 }
 
-export default App;
+const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: () => (
+      <>
+        <Outlet />
+      </>
+    ),
+    children: [
+      { path: "annuaire?", Component: HomeAnnuaire },
+      { path: "arcs", Component: HomeArcs },
+      { path: "armes", Component: HomeArmes },
+    ],
+  },
+]);
