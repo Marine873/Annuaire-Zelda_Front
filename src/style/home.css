@@ -3,12 +3,19 @@
   margin-top: 20px;
 }
 
+.annuaire_grille {
+  display: flex;
+  align-items: center;
+}
+
+.annuaire_grilleLigne {
+  display: flex;
+  align-items: center;
+}
+
 .annuaire_case {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-}
-
-.annuaire_image {
-  height: 100px !important;
+  align-items: center;
+  margin: 20px;
 }
