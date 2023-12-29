@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { getAllIngredients } from "../api/IngredientsCall";
+import { getAllIngredients } from "../../api/IngredientsCall";
 import { useNavigate } from "react-router-dom";
+import { AffichageTableau } from "../tableau/AffichageTableau";
 
 export function HomeIngredients() {
   const [ingredients, setIngredients] = useState([]);
@@ -19,22 +20,7 @@ export function HomeIngredients() {
   return (
     <>
       <h1>Liste des ingredients</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Jeux</th>
-            <th>Nom</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ingredients?.map((ingredient) => (
-            <tr key={ingredient.id}>
-              <th>{ingredient.jeux}</th>
-              <th>{ingredient.nom}</th>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <AffichageTableau datas={ingredients} IsIngredient={true} />
       <input
         class="button button-clear"
         type="submit"
