@@ -6,6 +6,7 @@
 .annuaire_grille {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .annuaire_grilleLigne {

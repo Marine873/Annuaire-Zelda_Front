@@ -1,10 +1,10 @@
-import { HomeArcs } from "../src/component/HomeArcs";
-import { HomeArmes } from "../src/component/HomeArmes";
 import { HomeAnnuaire } from "../src/component/HomeAnnuaire";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { HomeBoucliers } from "./component/HomeBoucliers";
-import { HomeIngredients } from "./component/HomeIngredients";
-import { HomeVetements } from "./component/HomeVetements";
+import { HomeArcs } from "./component/home/HomeArcs";
+import { HomeArmes } from "./component/home/HomeArmes";
+import { HomeBoucliers } from "./component/home/HomeBoucliers";
+import { HomeIngredients } from "./component/home/HomeIngredients";
+import { HomeVetements } from "./component/home/HomeVetements";
 
 import "milligram";
 
